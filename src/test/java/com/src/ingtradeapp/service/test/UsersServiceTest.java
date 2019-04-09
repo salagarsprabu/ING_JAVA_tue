@@ -20,13 +20,9 @@ public class UsersServiceTest {
 	@MockBean
 	private UsersRepository usersRepository;
 	
-	/*@Test
+	@Test
 	public void userDetailsTest() {
-		String accountNumber = "174158989";
-		Users user=new Users(accountNumber);
-		when(usersRepository.findByAccountNumber(accountNumber)).thenReturn(user);
-		assertEquals(accountNumber, user.getAccountNumber());
-	}*/
+	}
 	
 
 }
