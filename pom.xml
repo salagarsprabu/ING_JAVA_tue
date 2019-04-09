@@ -6,12 +6,12 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>1.5.20.SNAPSHOT</version>
+		<version>1.5.20.RELEASE</version>
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.src</groupId>
 	<artifactId>ingtradeapp</artifactId>
-	<version>1.0.1-RELEASES</version>
+	<version>1.0.1-SNAPSHOT</version>
 	<name>breacherapp</name>
 	<description>Demo project for Spring Boot</description>
 
