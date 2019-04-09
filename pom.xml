@@ -11,7 +11,7 @@
 	</parent>
 	<groupId>com.src</groupId>
 	<artifactId>ingtradeapp</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>1.0.1-RELEASES</version>
 	<name>breacherapp</name>
 	<description>Demo project for Spring Boot</description>
 
@@ -74,15 +74,9 @@
 	</dependencies>
 	<distributionManagement>
 		<repository>
-			<id>releases</id>
-			<name>Internal Releases</name>
-			<url>http://13.233.250.78:8081/nexus/content/repositories/releases/</url>
-		</repository>
-		<snapshotRepository>
-			<id>deployment</id>
-			<name>Internal Snapshot Releases</name>
-			<url>http://13.233.250.78:8081/nexus/content/repositories/snapshots/</url>
-		</snapshotRepository>
+    <id>maven_app</id>
+    <url>http://13.233.250.78:8081/nexus/content/repositories/maven_app</url>
+  </repository>
 	</distributionManagement>
 	<build>
 		<plugins>
