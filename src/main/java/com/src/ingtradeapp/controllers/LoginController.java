@@ -19,6 +19,7 @@ public class LoginController {
 	@Autowired
 	LoginService loginService;
 
+	
 	@PostMapping("")
 	public 	LoginResponse singup(@RequestBody Users user) {
 		return loginService.singup(user.getName(),user.getPassword());

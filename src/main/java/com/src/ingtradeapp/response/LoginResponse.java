@@ -3,7 +3,7 @@ package com.src.ingtradeapp.response;
 public class LoginResponse {
 	
 	private String sessionid;
-	private Boolean statu;
+	private Boolean status;
 	private String role;
 	private String accountnumber;
 	
@@ -14,14 +14,15 @@ public class LoginResponse {
 		this.sessionid = sessionid;
 	}
 	public Boolean getStatu() {
-		return statu;
+		return status;
 	}
-	public void setStatu(Boolean statu) {
-		this.statu = statu;
+	public void setStatu(Boolean status) {
+		this.status = status;
 	}
 	public String getRole() {
 		return role;
 	}
+	
 	public void setRole(String role) {
 		this.role = role;
 	}
