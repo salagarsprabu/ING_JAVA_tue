@@ -14,6 +14,9 @@ public class UsersService {
 	@Autowired
 	UsersRepository  usersRepository;
 	
+	@Autowired
+	UserBalanceRepo  userBalanceRepo;
+	
 	public Users userDetails(String accNum) {
 		return usersRepository.findByAccountNumber(accNum); 
 	}
@@ -24,7 +27,7 @@ public class UsersService {
 
 	public UsersBalance getBalance(String accountNumber) {
 
-		return usersBalanceRepository.findByAccountNumber(accountNumber);
+		return userBalanceRepo.findByAccountNumber(accountNumber);
 
 	}
 }
