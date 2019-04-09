@@ -19,7 +19,7 @@ public class ExceptionHandlerControllerAdvice {
 			final HttpServletRequest request) {
 
 		ExceptionResponse error = new ExceptionResponse();
-		error.setErrorMessage(exception.getMessage());
+		error.setMsg(exception.getMessage());
 		error.callerURL(request.getRequestURI());
 
 		return error;
