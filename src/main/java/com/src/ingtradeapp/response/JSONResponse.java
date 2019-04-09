@@ -5,6 +5,15 @@ import org.springframework.stereotype.Component;
 public class JSONResponse {
 	private String msg;
 	private Boolean status;
+	private String accountNumber;
+	
+	public String getAccountNumber() {
+		return accountNumber;
+	}
+
+	public void setAccountNumber(String accountNumber) {
+		this.accountNumber = accountNumber;
+	}
 
 	public Boolean getStatus() {
 		return status;
