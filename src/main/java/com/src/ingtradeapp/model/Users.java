@@ -43,6 +43,14 @@ public class Users implements Serializable {
 	
 	@Column String branch;
 	
+	public Users(String name, String password) {
+		this.name = name;
+		this.password = password;
+	}
+
+	public Users() {
+	}
+
 	public String getAddress() {
 		return address;
 	}
