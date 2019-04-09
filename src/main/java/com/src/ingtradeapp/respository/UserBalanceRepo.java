@@ -11,4 +11,5 @@ import com.src.ingtradeapp.model.UsersBalance;
 @Component
 public interface UserBalanceRepo extends JpaRepository<UsersBalance, Serializable>{
 	public UsersBalance findByUserId(Long id);
+	public UsersBalance findByAccountNumber(String accNum);
 }
