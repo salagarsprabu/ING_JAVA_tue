@@ -9,6 +9,6 @@ import com.src.ingtradeapp.model.Users;
 @Component
 public interface UsersRepository extends JpaRepository<Users, Serializable>{
 	
-	public Users findAllByAccountNumber(String accNum);
+	public Users findByAccountNumber(String accNum);
 
 }

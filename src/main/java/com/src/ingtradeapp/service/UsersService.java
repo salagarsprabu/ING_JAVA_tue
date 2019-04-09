@@ -13,8 +13,6 @@ public class UsersService {
 	UsersRepository  usersRepository;
 	
 	public Users userDetails(String accNum) {
-		
-		return usersRepository.findAllByAccountNumber(accNum); 
-		
+		return usersRepository.findByAccountNumber(accNum); 
 	}
 }
