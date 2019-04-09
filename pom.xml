@@ -167,6 +167,6 @@
 				</plugin>
 			</plugins>
 		</pluginManagement>
-		<finalName>INGSuite</finalName>
+		<finalName>ING_JAVA_tue_final</finalName>
 	</build>
 </project>
