@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.src.ingtradeapp.model.Users;
+import com.src.ingtradeapp.model.UsersBalance;
 import com.src.ingtradeapp.response.JSONResponse;
 import com.src.ingtradeapp.service.UsersService;
 
@@ -22,16 +23,16 @@ public class UsersController {
 	JSONResponse response;
 	
 	@Autowired
-	UsersService usersRepository;
+	UsersService usersService;
 	
 	@GetMapping("/{account_number}")
 	public Users userDetails(@PathVariable("account_number") String accNum) {
-		return usersRepository.userDetails(accNum);
+		return usersService.userDetails(accNum);
 	}
 	
 	@GetMapping("")
 	public List<Users> getUsers() {
-		return usersRepository.getUsers();
+		return usersService.getUsers();
 	}
 	
 	@GetMapping("/balance/{accountNumber}")

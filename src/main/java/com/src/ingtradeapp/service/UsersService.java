@@ -6,6 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.src.ingtradeapp.model.Users;
+import com.src.ingtradeapp.model.UsersBalance;
+import com.src.ingtradeapp.respository.UserBalanceRepo;
 import com.src.ingtradeapp.respository.UsersRepository;
 
 @Service
