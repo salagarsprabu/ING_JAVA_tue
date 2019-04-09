@@ -1,5 +1,7 @@
 package com.src.ingtradeapp.controllers;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -25,6 +27,11 @@ public class UsersController {
 	@GetMapping("/{account_number}")
 	public Users userDetails(@PathVariable("account_number") String accNum) {
 		return usersRepository.userDetails(accNum);
+	}
+	
+	@GetMapping("")
+	public List<Users> getUsers() {
+		return usersRepository.getUsers();
 	}
 	
 	

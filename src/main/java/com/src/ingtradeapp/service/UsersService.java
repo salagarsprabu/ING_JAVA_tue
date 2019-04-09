@@ -1,5 +1,7 @@
 package com.src.ingtradeapp.service;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -10,11 +12,17 @@ import com.src.ingtradeapp.respository.UsersRepository;
 public class UsersService {
 
 	@Autowired
-	UsersRepository  usersRepository;
-	
+	UsersRepository usersRepository;
+
 	public Users userDetails(String accNum) {
-		
-		return usersRepository.findAllByAccountNumber(accNum); 
-		
+
+		return usersRepository.findByAccountNumber(accNum);
+
+	}
+
+	public List<Users> getUsers() {
+
+		return usersRepository.findAll();
+
 	}
 }
