@@ -6,6 +6,7 @@ import org.springframework.stereotype.Service;
 import com.src.ingtradeapp.model.Users;
 import com.src.ingtradeapp.respository.UsersRepository;
 
+
 @Service
 public class UsersService {
 
