@@ -26,5 +26,6 @@ public class TrasnferAmountController {
 	@PostMapping("")
 	public JSONResponse transferAmount(@RequestBody TransferAmountRequest transferInfo) throws AddFailException {
 		return transferService.transferAmount(transferInfo);
+	
 	}
 }
