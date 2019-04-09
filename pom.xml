@@ -6,7 +6,7 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>1.5.20.RELEASE</version>
+		<version>1.5.20.SNAPSHOT</version>
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.src</groupId>
@@ -73,10 +73,10 @@
 		</dependency>
 	</dependencies>
 	<distributionManagement>
-		<repository>
-    <id>maven_app</id>
-    <url>http://13.233.250.78:8081/nexus/content/repositories/maven_app</url>
-  </repository>
+		<snapshotRepository>
+    <id>snapshots</id>
+    <url>http://13.233.250.78:8081/nexus/content/repositories/snapshots</url>
+  </snapshotRepository>
 	</distributionManagement>
 	<build>
 		<plugins>
