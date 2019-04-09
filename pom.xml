@@ -10,7 +10,7 @@
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.src</groupId>
-	<artifactId>ING_JAVA_tue_final</artifactId>
+	<artifactId>ingtradeapp</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>breacherapp</name>
 	<description>Demo project for Spring Boot</description>

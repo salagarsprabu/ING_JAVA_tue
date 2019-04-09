@@ -4,8 +4,8 @@ Implementation-Version: 0.0.1-SNAPSHOT
 Built-By: user1
 Implementation-Vendor-Id: com.src
 Build-Jdk: 1.8.0_201
-Implementation-URL: https://projects.spring.io/spring-boot/ING_JAVA_tu
- e_final/
+Implementation-URL: https://projects.spring.io/spring-boot/ingtradeapp
+ /
 Created-By: Maven Integration for Eclipse
 Implementation-Vendor: Pivotal Software, Inc.
 
