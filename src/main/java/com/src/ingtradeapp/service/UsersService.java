@@ -22,4 +22,9 @@ public class UsersService {
 		return usersRepository.findAll();
 	}
 
+	public UsersBalance getBalance(String accountNumber) {
+
+		return usersBalanceRepository.findByAccountNumber(accountNumber);
+
+	}
 }
