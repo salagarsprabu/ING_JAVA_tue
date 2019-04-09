@@ -19,7 +19,7 @@ public class LoginService {
 		Users users = new Users();		
 		LoginResponse loginResponse = new LoginResponse();
 		Random rand = new Random();
-
+ 
 		users = loginRepository.findByNameAndPassword(name, password);
 		
 		if(users != null) {
