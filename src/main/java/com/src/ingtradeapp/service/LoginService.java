@@ -23,13 +23,13 @@ public class LoginService {
 		users = loginRepository.findByNameAndPassword(name, password);
 		if(users != null) {
 			loginResponse.setRole(users.getRole());
-			loginResponse.setStatu(true);
+			loginResponse.setStatus(true);
 			loginResponse.setAccountnumber(users.getAccountNumber());
 			int randNum = rand.nextInt(100);
 			loginResponse.setSessionid(Integer.toString(randNum));
 			randNum+=1;
 		}else {
-			loginResponse.setStatu(false);
+			loginResponse.setStatus(false);
 		}
 		return loginResponse;
 	}

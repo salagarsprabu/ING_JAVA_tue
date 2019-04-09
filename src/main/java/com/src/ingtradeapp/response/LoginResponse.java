@@ -13,10 +13,10 @@ public class LoginResponse {
 	public void setSessionid(String sessionid) {
 		this.sessionid = sessionid;
 	}
-	public Boolean getStatu() {
+	public Boolean getStatus() {
 		return status;
 	}
-	public void setStatu(Boolean status) {
+	public void setStatus(Boolean status) {
 		this.status = status;
 	}
 	public String getRole() {
