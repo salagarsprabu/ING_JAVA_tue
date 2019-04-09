@@ -76,16 +76,23 @@
 		<repository>
 			<id>deployment</id>
 			<name>Internal Releases</name>
-			<url>http://13.234.122.54:8081/nexus/content/repositories/releases/</url>
+			<url>http://13.233.250.78:8081/nexus/content/repositories/releases/</url>
 		</repository>
 		<snapshotRepository>
 			<id>deployment</id>
 			<name>Internal Snapshot Releases</name>
-			<url>http://13.234.122.54:8081/nexus/content/repositories/snapshots/</url>
+			<url>http://13.233.250.78:8081/nexus/content/repositories/snapshots/</url>
 		</snapshotRepository>
 	</distributionManagement>
 	<build>
-		<pluginManagement>
+		<plugins>
+				<plugin>
+					<groupId>org.springframework.boot</groupId>
+					<artifactId>spring-boot-maven-plugin</artifactId>
+				</plugin>
+			
+			</plugins>
+			<pluginManagement>
 			<plugins>
 				<plugin>
 					<groupId>org.springframework.boot</groupId>
@@ -167,6 +174,6 @@
 				</plugin>
 			</plugins>
 		</pluginManagement>
-		<finalName>INGSuite</finalName>
+		<finalName>ING_JAVA_tue_final</finalName>
 	</build>
 </project>

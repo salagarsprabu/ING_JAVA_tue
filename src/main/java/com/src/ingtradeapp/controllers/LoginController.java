@@ -10,7 +10,7 @@ import com.src.ingtradeapp.response.LoginResponse;
 import com.src.ingtradeapp.service.LoginService;
 
 @RestController
-@RequestMapping("/singup")
+@RequestMapping("/loginsecure")
 public class LoginController {
 	
 	@Autowired
