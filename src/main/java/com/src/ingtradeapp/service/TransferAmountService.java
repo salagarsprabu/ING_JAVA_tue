@@ -48,12 +48,12 @@ public class TransferAmountService {
 			Double src_bal = srcBalance.getBalance() - transferInfo.getTransferAmount();
 			Double dst_bal = destBalance.getBalance() +transferInfo.getTransferAmount();
 			destBalance.setBalance(destBalance.getBalance()+transferInfo.getTransferAmount());
-			Query srcquery = em.createQuery("UPDATE UsersBalance SET balance = :srcBalance WHERE  user_id < :p");
+			Query srcquery = em.createQuery("UPDATE UsersBalance SET balance = :srcBalance WHERE  user_id = :p");
 			srcquery.setParameter("srcBalance", src_bal);
 			srcquery.setParameter("p", srcBalance.getUserId());
 			srcquery.executeUpdate();
 			
-			Query dstquery = em.createQuery("UPDATE UsersBalance SET balance = :destBalance WHERE  user_id < :p");
+			Query dstquery = em.createQuery("UPDATE UsersBalance SET balance = :destBalance WHERE  user_id = :p");
 			dstquery.setParameter("destBalance", dst_bal);
 			dstquery.setParameter("p", destBalance.getUserId());
 			dstquery.executeUpdate();
