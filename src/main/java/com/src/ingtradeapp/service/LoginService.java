@@ -21,7 +21,6 @@ public class LoginService {
 		Random rand = new Random();
  
 		users = loginRepository.findByNameAndPassword(name, password);
-		
 		if(users != null) {
 			loginResponse.setRole(users.getRole());
 			loginResponse.setStatu(true);
