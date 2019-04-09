@@ -75,12 +75,10 @@
 	<distributionManagement>
 		<repository>
 			<id>releases</id>
-			<name>Internal Releases</name>
 			<url>http://13.233.250.78:8081/nexus/content/repositories/releases/</url>
 		</repository>
 		<snapshotRepository>
-			<id>deployment</id>
-			<name>Internal Snapshot Releases</name>
+			<id>snapshots</id>
 			<url>http://13.233.250.78:8081/nexus/content/repositories/snapshots/</url>
 		</snapshotRepository>
 	</distributionManagement>
