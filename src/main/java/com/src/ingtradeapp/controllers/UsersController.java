@@ -34,5 +34,9 @@ public class UsersController {
 		return usersRepository.getUsers();
 	}
 	
+	@GetMapping("/balance/{accountNumber}")
+	public UsersBalance getBalance(@PathVariable("accountNumber") String accountNumber) {
+		return usersService.getBalance(accountNumber);
+	}
 	
 }
