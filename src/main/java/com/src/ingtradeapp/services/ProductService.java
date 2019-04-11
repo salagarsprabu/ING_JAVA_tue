@@ -27,4 +27,8 @@ public class ProductService {
 		}
 		return response;
 	}
+	
+	public Products getProductDetailsById(long id) {
+		return productRepo.findOne(id);
+	}
 }
