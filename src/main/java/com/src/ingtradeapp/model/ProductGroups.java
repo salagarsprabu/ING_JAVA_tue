@@ -16,6 +16,16 @@ public class ProductGroups {
 	@Column
 	private Long id;
 
+	private Integer count;
+	
+	public Integer getCount() {
+		return count;
+	}
+
+	public void setCount(Integer count) {
+		this.count = count;
+	}
+
 	@Column
 	private String name;
 

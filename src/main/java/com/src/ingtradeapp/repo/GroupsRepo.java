@@ -10,6 +10,5 @@ import com.src.ingtradeapp.model.ProductGroups;
 
 @Component
 public interface GroupsRepo extends CrudRepository<ProductGroups, Serializable>{
-	
 	List<ProductGroups> findAll();
 }
