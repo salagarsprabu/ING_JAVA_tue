@@ -27,6 +27,17 @@ public class ProductGroups {
 	}
 
 	@Column
+	private String language;
+	
+	public String getLanguage() {
+		return language;
+	}
+
+	public void setLanguage(String language) {
+		this.language = language;
+	}
+
+	@Column
 	private String name;
 
 

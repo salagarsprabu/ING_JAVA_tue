@@ -25,7 +25,7 @@ public class ProductController {
 	ProductService productService;
 	
 	@GetMapping("{group_id}")
-	public List<ProductsResponse> getStocks(@PathVariable("group_id") Long groupId) {
+	public List<ProductsResponse> getProducts(@PathVariable("group_id") Long groupId) {
 		return productService.getAllProducts(groupId);
 	}
 }
