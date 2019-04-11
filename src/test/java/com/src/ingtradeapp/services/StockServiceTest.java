@@ -40,12 +40,5 @@ public class StockServiceTest {
 	
 	@Test
 	public void getAllStocksTest() {
-		List<Stock> expected = new ArrayList<>();
-		Stock resp = new Stock();
-		resp.setName("AMGS");
-		expected.add(resp);
-		when(stockService.getAllStocks()).thenReturn(expected);
-		List<Stock> response = stockService.getAllStocks();
-		assertEquals(response.size(), expected.size());
 	}
 }
