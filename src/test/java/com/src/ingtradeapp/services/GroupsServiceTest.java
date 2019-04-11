@@ -16,8 +16,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
+import com.src.ingtradeapp.controllers.GroupsController;
+import com.src.ingtradeapp.controllers.ProductController;
+import com.src.ingtradeapp.controllers.StocksController;
 import com.src.ingtradeapp.model.ProductGroups;
-import com.src.ingtradeapp.model.Stock;
 import com.src.ingtradeapp.repo.GroupsRepo;
 
 @RunWith(SpringJUnit4ClassRunner.class)
@@ -28,6 +30,17 @@ public class GroupsServiceTest {
 	@Mock
 	GroupsRepo groupsRepo;
 
+	@Mock
+	GroupsController groupController;
+	
+	@Mock
+	ProductController productController;
+	
+	@Mock
+	ProductController productDetailController;
+	
+	@Mock
+	StocksController stocksController;
 	
 	@Autowired
 	@InjectMocks
