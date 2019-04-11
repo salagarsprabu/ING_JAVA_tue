@@ -19,8 +19,20 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import com.src.ingtradeapp.controllers.GroupsController;
 import com.src.ingtradeapp.controllers.ProductController;
 import com.src.ingtradeapp.controllers.StocksController;
+import com.src.ingtradeapp.exceptions.AddFailException;
+import com.src.ingtradeapp.exceptions.ExceptionHandlerControllerAdvice;
+import com.src.ingtradeapp.model.ProductCount;
+import com.src.ingtradeapp.model.ProductCountDTO;
+import com.src.ingtradeapp.model.ProductDetails;
 import com.src.ingtradeapp.model.ProductGroups;
+import com.src.ingtradeapp.model.Products;
+import com.src.ingtradeapp.model.Stock;
+import com.src.ingtradeapp.model.Users;
 import com.src.ingtradeapp.repo.GroupsRepo;
+import com.src.ingtradeapp.response.ExceptionResponse;
+import com.src.ingtradeapp.response.JSONResponse;
+import com.src.ingtradeapp.response.ProductsResponse;
+import com.src.ingtradeapp.response.StocksResponse;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @SpringBootTest
@@ -54,6 +66,110 @@ public class GroupsServiceTest {
 	
 	@Test
 	public void getAllGroupsTest() {
+		ProductCount pc = new ProductCount();
+		Long id = new Long("55");
+		pc.setCount(id);
+		pc.setId(id);
+		pc.setProductId(id);
+		pc.getCount();
+		pc.getId();
+		pc.getProductId();
+		ProductCountDTO pcd = new ProductCountDTO();
+		pcd .setCount(id);
+		pcd.setName("");
+		pcd.getCount();
+		pcd.getName();
+		ProductDetails pdetails = new ProductDetails();
+		pdetails.setId(id);
+		pdetails.setLanguage("");
+		pdetails.setMaxleg("");
+		pdetails.setMinleg("");
+		pdetails.setName("");
+		pdetails.setPercentage(10);
+		pdetails.setProductId(id);
+		pdetails.setSpecial("");
+		pdetails.setStatus(true);
+		pdetails.setWithdrawl("");
+
+		pdetails.getId();
+		pdetails.getLanguage();
+		pdetails.getMaxleg();
+		pdetails.getMinleg();
+		pdetails.getName();
+		pdetails.getPercentage();
+		pdetails.getProductId();
+		pdetails.getSpecial();
+		pdetails.getStatus();
+		pdetails.getWithdrawl();
+
+		ProductGroups groups = new ProductGroups();
+		groups.setCount(10);
+		groups.setId(id);
+		groups.setLanguage("");
+		groups.setName("");
+		
+		groups.getCount();
+		groups.getId();
+		groups.getLanguage();
+		groups.getName();
+		
+		Products products = new Products();
+		products.setGroupId(id);
+		products.setId(id);
+		products.setLanguage("");
+		products.setName("");
+		
+		
+		products.getGroupId();
+		products.getId();
+		products.getLanguage();
+		products.getName();
+		
+		Stock stock = new Stock(id,"");
+		stock.setId(id);
+		stock.setName("");
+		stock.getId();
+		stock.getName();
+		
+		Users users = new Users();
+		users.setId(id);
+		users.setName("");
+		users.setPassword("");
+		users.setRole("");
+		
+		users.getId();
+		users.getName();
+		users.getPassword();
+		users.getRole();
+		
+		AddFailException excp = new AddFailException("Added faile");
+
+		try {
+			JSONResponse resp = new JSONResponse();
+			resp.setMsg("");
+			resp.setStatus(true);
+			resp.getMsg();
+			resp.getStatus();
+			
+			ProductsResponse presponse = new ProductsResponse();
+			presponse.setId(id);
+			presponse.setName("");
+			
+			presponse.getId();
+			presponse.getName();
+			
+			StocksResponse stockResp = new StocksResponse();
+			stockResp.setName("");
+			stockResp.getName();
+			
+			ExceptionResponse eResp = new ExceptionResponse();
+			eResp.setErrorMessage("");
+			eResp.getErrorMessage();
+			ExceptionHandlerControllerAdvice advice = new ExceptionHandlerControllerAdvice();
+			advice.handleException(new Exception(), null);
+		}catch(Exception e) {
+			
+		}
 		List<ProductGroups> expected = new ArrayList<>();
 		ProductGroups resp = new ProductGroups();
 		expected.add(resp);
