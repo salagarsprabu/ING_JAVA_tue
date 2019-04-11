@@ -26,7 +26,7 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 @EnableAutoConfiguration
 @EnableWebMvc
 @EnableJpaRepositories
-public class IngtradeappApplication extends WebMvcConfigurerAdapter {
+public class IngtradeappApplication extends WebMvcConfigurerAdapter { 
 	
 	public static void main(String[] args) {
 		SpringApplication.run(IngtradeappApplication.class, args);
