@@ -7,7 +7,6 @@ import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Component;
 
 import com.src.ingtradeapp.model.Stock;
-import com.src.ingtradeapp.response.StocksResponse;
 
 @Component
 public interface StockRepository extends CrudRepository<Stock, Serializable>{

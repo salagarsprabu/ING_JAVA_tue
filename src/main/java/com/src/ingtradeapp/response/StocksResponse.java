@@ -11,6 +11,4 @@ public class StocksResponse {
 	public void setName(String name) {
 		this.name = name;
 	}
-	public StocksResponse() {
-	}
 }

@@ -24,7 +24,7 @@ public class ProductService {
 			resp.setId(temp.getId());
 			resp.setName(temp.getName());
 			response.add(resp);
-		};
+		}
 		return response;
 	}
 }

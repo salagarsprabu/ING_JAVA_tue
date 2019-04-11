@@ -1,6 +1,5 @@
 package com.src.ingtradeapp.services;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,8 +15,6 @@ public class GroupsService {
 	GroupsRepo groupsRepo;
 	
 	public List<ProductGroups> getAllGroups() {
-		List<ProductGroups> lrp = new ArrayList<ProductGroups>();
-		lrp =groupsRepo.findAll();
-		return lrp;
+		return groupsRepo.findAll();
 	}
 }
