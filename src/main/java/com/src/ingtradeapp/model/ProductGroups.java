@@ -1,7 +1,5 @@
 package com.src.ingtradeapp.model;
 
-import java.io.Serializable;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -11,18 +9,16 @@ import javax.persistence.Table;
 
 @Entity
 @Table
-public class Group implements Serializable {
-
-	private static final long serialVersionUID = 1L;
+public class ProductGroups {
 
 	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO)
-	@Column(name = "id", length = 11)
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	@Column
 	private Long id;
 
 	@Column
 	private String name;
-	
+
 
 	public Long getId() {
 		return id;
@@ -39,6 +35,4 @@ public class Group implements Serializable {
 	public void setName(String name) {
 		this.name = name;
 	}
-
-	
 }

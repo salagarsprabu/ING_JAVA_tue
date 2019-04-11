@@ -1,7 +1,5 @@
 package com.src.ingtradeapp.model;
 
-import java.io.Serializable;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -11,20 +9,18 @@ import javax.persistence.Table;
 
 @Entity
 @Table
-public class ProductCount implements Serializable {
-
-	private static final long serialVersionUID = 1L;
+public class ProductCount {
 
 	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO)
-	@Column(name = "id", length = 11)
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	@Column
 	private Long id;
 
 	@Column
-	private Long count;
-	
+	private Long productId;
+
 	@Column
-	private Integer productId;
+	private Long count;
 
 	public Long getId() {
 		return id;
@@ -34,6 +30,14 @@ public class ProductCount implements Serializable {
 		this.id = id;
 	}
 
+	public Long getProductId() {
+		return productId;
+	}
+
+	public void setProductId(Long productId) {
+		this.productId = productId;
+	}
+
 	public Long getCount() {
 		return count;
 	}
@@ -41,15 +45,5 @@ public class ProductCount implements Serializable {
 	public void setCount(Long count) {
 		this.count = count;
 	}
-
-	public Integer getProductId() {
-		return productId;
-	}
-
-	public void setProductId(Integer productId) {
-		this.productId = productId;
-	}
-	
-	
 
 }

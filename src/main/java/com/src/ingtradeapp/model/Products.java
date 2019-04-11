@@ -11,7 +11,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table
-public class Product implements Serializable {
+public class Products implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 
@@ -22,9 +22,10 @@ public class Product implements Serializable {
 
 	@Column
 	private String name;
+
 	
 	@Column
-	private Integer groupId;
+	private Long groupId;
 	
 	@Column
 	private String description;
@@ -32,13 +33,27 @@ public class Product implements Serializable {
 	@Column
 	private Double amount;
 	
-	
+	public Long getId() {
+		return id;
+	}
 
-	public Integer getGroupId() {
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public Long getGroupId() {
 		return groupId;
 	}
 
-	public void setGroupId(Integer groupId) {
+	public void setGroupId(Long groupId) {
 		this.groupId = groupId;
 	}
 
@@ -57,22 +72,6 @@ public class Product implements Serializable {
 	public void setAmount(Double amount) {
 		this.amount = amount;
 	}
-
-	public Long getId() {
-		return id;
-	}
-
-	public void setId(Long id) {
-		this.id = id;
-	}
-
-	public String getName() {
-		return name;
-	}
-
-	public void setName(String name) {
-		this.name = name;
-	}
-
+	
 	
 }
