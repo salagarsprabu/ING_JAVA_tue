@@ -11,7 +11,7 @@
 	</parent>
 	<groupId>com.src</groupId>
 	<artifactId>ingtradeapp</artifactId>
-	<version>1.0.1-SNAPSHOT</version>
+	<version>1.0.2-SNAPSHOT</version>
 	<name>ingtradeapp</name>
 	<description>Demo project for Spring Boot</description>
 
