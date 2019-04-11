@@ -28,4 +28,10 @@ public class ProductController {
 	public List<ProductsResponse> getProducts(@PathVariable("group_id") Long groupId) {
 		return productService.getAllProducts(groupId);
 	}
+	
+	
+	@GetMapping("{group_id}/{language}")
+	public List<ProductsResponse> getProductsByLang(@PathVariable("group_id") Long groupId,@PathVariable("group_id") String language) {
+		return productService.getAllProductsByLang(groupId,language);
+	}
 }

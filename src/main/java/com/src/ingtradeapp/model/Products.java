@@ -27,7 +27,6 @@ public class Products implements Serializable {
 	private String language;
 
 	
-	
 	public String getLanguage() {
 		return language;
 	}
@@ -38,12 +37,6 @@ public class Products implements Serializable {
 
 	@Column
 	private Long groupId;
-	
-	@Column
-	private String description;
-	
-	@Column
-	private Double amount;
 	
 	public Long getId() {
 		return id;
@@ -67,21 +60,5 @@ public class Products implements Serializable {
 
 	public void setGroupId(Long groupId) {
 		this.groupId = groupId;
-	}
-
-	public String getDescription() {
-		return description;
-	}
-
-	public void setDescription(String description) {
-		this.description = description;
-	}
-
-	public Double getAmount() {
-		return amount;
-	}
-
-	public void setAmount(Double amount) {
-		this.amount = amount;
 	}
 }

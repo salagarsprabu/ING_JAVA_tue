@@ -27,4 +27,13 @@ public class GroupsService {
 		}
 		return result;
 	}
+	
+	public List<ProductGroups> getAllGroupsByLang(String language) {
+		List<ProductGroups> result = groupsRepo.findAllByLanguage(language);
+		for(ProductGroups currentGroup : result) {
+			int count = productRepo.findAllByGroupId(currentGroup.getId()).size();
+			currentGroup.setCount(count);
+		}
+		return result;
+	}
 }

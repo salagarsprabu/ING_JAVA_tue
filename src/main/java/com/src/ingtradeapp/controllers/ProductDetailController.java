@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.src.ingtradeapp.model.ProductDetails;
 import com.src.ingtradeapp.model.Products;
 import com.src.ingtradeapp.response.JSONResponse;
 import com.src.ingtradeapp.services.ProductService;
@@ -23,7 +24,14 @@ public class ProductDetailController {
 	ProductService productService;
 	
 	@GetMapping("/{product_id}")
-	public Products  getStocks(@PathVariable("product_id") Long id) {
-		return productService.getProductDetailsById(id);
+	public ProductDetails  getStocks(@PathVariable("product_id") Long id) {
+		ProductDetails res = productService.getProductDetailsById(id);
+		if(res == null) {
+			res = new ProductDetails();
+			res.setStatus(false);
+		} else {
+			res.setStatus(true);
+		}
+		return res;
 	}
 }
