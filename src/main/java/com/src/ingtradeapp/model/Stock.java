@@ -16,7 +16,7 @@ public class Stock implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Column(name = "id", length = 11)
 	private Long id;
 
@@ -39,7 +39,6 @@ public class Stock implements Serializable {
 		this.name = name;
 	}
 
-	
 	@Column
 	private Integer recommended = 0;
 
@@ -51,14 +50,8 @@ public class Stock implements Serializable {
 		this.recommended = recommended;
 	}
 
-	
 	public Stock(Long id, String name) {
 		this.id = id;
 		this.name = name;
 	}
-	
-	public Stock() {
-		
-	}
-
 }
