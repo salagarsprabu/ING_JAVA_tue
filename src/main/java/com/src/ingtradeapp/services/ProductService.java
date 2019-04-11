@@ -21,6 +21,9 @@ public class ProductService {
 	@Autowired
 	ProductDetailsRepository productDetailRepo;
 	
+	@Autowired
+	ProductCountService countService;
+	
 	public List<ProductsResponse> getAllProducts(Long groupId) {
 		List<Products> result = productRepo.findAllByGroupId(groupId);
 		List<ProductsResponse> response = new ArrayList<>();
@@ -46,6 +49,9 @@ public class ProductService {
 	}
 	
 	public ProductDetails getProductDetailsById(long id) {
+		countService.updateCount(id);
 		return productDetailRepo.findByProductId(id);
 	}
+	
+	
 }
