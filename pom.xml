@@ -11,7 +11,7 @@
 	</parent>
 	<groupId>com.src</groupId>
 	<artifactId>ingtradeapp</artifactId>
-	<version>1.0.2-SNAPSHOT</version>
+	<version>1.0.3-SNAPSHOT</version>
 	<name>ingtradeapp</name>
 	<description>Demo project for Spring Boot</description>
 
@@ -73,10 +73,10 @@
 		</dependency>
 	</dependencies>
 	<distributionManagement>
-		<snapshotRepository>
-			<id>snapshots</id>
-			<url>http://13.233.250.78:8081/nexus/content/repositories/snapshots</url>
-		</snapshotRepository>
+		 <snapshotRepository>
+   			 <id>snapshots</id>
+   			 <url>http://13.233.250.78:8081/nexus/content/repositories/snapshots</url>
+  		</snapshotRepository>
 	</distributionManagement>
 	<build>
 		<plugins>
